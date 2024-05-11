@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This is a hotel booking website designed using html css and javascript which is made by charles churu a passionate web developer </title>
+    <link rel="stylesheet" href="hotel.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body>
+<header class="headeer" id="navigation-menu">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="#"><img src="images/img_2.png" height="20"></a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#rooms" >Rooms</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#restaurant" >Restaurant</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#gallery" >Gallery</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#faqs.html" >FAQs</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link " href="#contact" >Contact</a>
+                      </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-sider-insert-id="3480ad0c-2a1f-45e8-bc23-1879f0805dc1" data-listener-added_6c18a6b4="true" data-sider-select-id="bfe59f93-247f-42dd-8881-9916cebe4dd7">
+                      <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                  </div>
+                </div>
+                <div class="hambuger">
+                    <span class="bar"></span>
+                     <span class="bar"></span>
+                     <span class="bar"></span>
+                </div>
+              </nav>
+           
+       
+</header>
+<script>
+const hambuger = document.querySelector('.hambuger');
+    const navMenu= document.querySelector('.nav-menu');
+
+    hambuger.addEventListener('click', mobileMenu);
+
+    function mobileMenu(){
+        hambuger.classList.toggle('active');
+        navMenu.classList.toggle('active');
+
+    }
+
+    const navlink = document.querySelectorAll('.navlink');
+    navlink.forEach((n) => n.addEventListener("click", closeMenu));
+    function closeMenu(){
+        hambuger.classList.remove  ('active');
+        navMenu.classList.remove('active');
+
+    }
+    function img(anything)  {
+        document.querySelector ('.slide').src=anything
+
+
+    }
+    function change(change)
+    {
+        const line =document.querySelector('.image');
+        line.style.backgrounmd = change;
+    }
+
+</script>
+<section class="home" id="home">
+   <div class="head_container">
+       <div class="box">
+           <div class="text">
+               <h1> Hello Guest</h1>
+               <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cumque rem fugit nostrum officiis aliquam, eius quam quod, dolor delectus deleniti quos reprehenderit laudantium esse id dicta, explicabo fugiat? Nostrum, impedit exercitationem laudantium dolorem perspiciatis aspernatur. Saepe natus debitis sapiente placeat!</p>
+               <button> MORE INFO</button>
+           </div>
+       </div>
+       <div class="image">
+           <img src="images/img.png" alt="home image" class="slide">
+
+       </div>
+       <div class="image-item">
+           <img src="images/img.png" alt="" class="slide active" onclick="img('images/img.png')">
+           <img src="images/hotel_1.png" alt="" class="slide" onclick="img('images/hotel_1.png')">
+           <img src="images/hotel_2.png" alt="" class="slide" onclick="img('images/hotel_2.png')">
+           <img src="images/hotel_3.png" alt="" class="slide" onclick="img('images/hotel_3.png')">
+       </div>
+   </div>
+</section>
+
+<section class="book">
+    <div class="container flex">
+        <div class="input grid">
+            <div class="box">
+                <label for="">check-in</label>
+                <input type="date" name="" id="" placeholder="check-in-date">
+            </div>
+            <div class="box">
+                <label for="">check-out</label>
+                <input type="date" name="" id="" placeholder="check-out-date">
+            </div>
+            <div class="box">
+                <label for="">Adults</label> <br>
+                <input type="number" name="" id="" placeholder="0">
+            </div>
+            <div class="box">
+                <label for="">Children</label> <br>
+                <input type="number" name="" id="" placeholder="0">
+            </div>
+        </div>
+        <div class="search">
+            <input type="submit" value="SERARCH">
+        </div>
+    </div>
+
+</section>
+<section class="about top" id="about">
+    <div class="container flex" >
+        <div class="left">
+            <div class="img">
+                <img src="images/r_4.jpg" alt="" class="image1">
+                <img src="images/r_3.jpg" alt="" class="image2">
+
+            </div>
+        </div>
+        <div class="right">
+            <div class="heading" >
+                 <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+                 <h2>welcome to our hotel</h2>
+                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio cum voluptatibus harum repudiandae omnis iure, nobis facilis vel, eligendi placeat nisi, eveniet quas autem beatae sunt tempora? Molestias tenetur numquam eaque vero amet ea ipsa, dolores odit nostrum aspernatur labore reprehenderit quidem reiciendis suscipit, atque placeat praesentium, beatae fugit in aut distinctio excepturi. Magnam odit tenetur ipsum quam perferendis vero expedita. Ut, ea impedit officia sit libero ab minima voluptatum. Cupiditate ratione voluptates totam repudiandae fugit quis molestias aliquid et esse mollitia corrupti corporis atque sint debitis eaque voluptatem, suscipit laborum, ipsa quisquam temporibus architecto! Commodi voluptatibus quia ullam eveniet, aliquid libero repellat nisi. Ipsum, obcaecati alias quia mollitia, dignissimos error quisquam numquam quaerat similique facere ea, minus dicta aliquid! Error, nisi aspernatur! Impedit dolorum magni et mollitia! Consequatur nihil doloremque iusto repellat laboriosam obcaecati eveniet nam. Illum non aut in fugit sapiente est facere rem, ea, hic autem vero? Esse, atque illo corporis praesentium corrupti nisi officia vel hic similique aspernatur architecto quidem porro reprehenderit, modi ipsam adipisci numquam, nam nemo eos aliquid delectus. Voluptas quidem, consectetur fuga velit eum adipisci rem id pariatur aperiam impedit in repudiandae voluptates maiores at illo tempore eius vel minus. Accusamus voluptatum numquam excepturi molestias sunt, dolores cupiditate iure praesentium alias ab aut in obcaecati quidem quod saepe necessitatibus suscipit ullam impedit exercitationem ut enim error. Aliquam fugit eos atque obcaecati delectus. Ipsa exercitationem fugit mollitia quod ducimus hic inventore. Voluptatibus animi nobis numquam, esse perferendis quos dignissimos maxime quia natus sunt, odit modi tempore rem culpa doloremque fugiat libero temporibus. Accusantium dolores praesentium nemo et cum corrupti in. Dicta repellendus voluptates aspernatur libero ea explicabo fugiat eius et voluptatibus, nisi quod beatae cum sapiente cupiditate error esse aut tenetur. Aperiam corporis natus provident iste vitae. Neque, veniam. Facere fugit omnis distinctio quidem!</p>
+                 <button class="btn1">READ MORE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="wrapper top">
+    <div class="container">
+        <div class="text">
+            <h2>OUR AMENITIES</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quis accusantium qui accusamus aliquam quam tenetur? Aut earum nobis distinctio.</p>
+            <div class="content">
+                <div class="box flex">
+                    <i class="fi fi-sr-swimmer"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+                <div class="box flex">
+                    <i class="fas fa-swimming-pool"></i>
+                    <span>swimming pool</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="rooms" id="rooms">
+
+<div class="album py-5 bg-body-tertiary">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/r_1.jpeg" alt="">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/r_2.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/r_3.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text" data-sider-select-id="34e7388c-13e6-4f23-a4bc-68efe05af759">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/r_2.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card shadow-sm">
+           <img src="images/r_3.jpg" alt="">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                <small class="text-body-secondary">9 mins</small>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card shadow-sm">
+            <img src="images/r_1.jpeg" alt="">
+            <div class="card-body">
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary" style="font-weight: 400; font-size: large; color: black;">$250/night</button>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="footer">
+<div class="container">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Website</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Professionals</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-6 col-md-2 mb-3">
+          <h5>Hotels & Destinations</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+  
+        <div class="col-md-5 offset-md-1 mb-3">
+          <form>
+            <h5>Subscribe to our newsletter</h5>
+            <p>Monthly digest of what's new and exciting from us.</p>
+            <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address" data-sider-insert-id="f51c632d-b85f-45ea-9bd6-27bdfc92669f" data-listener-added_d322a338="true" data-sider-select-id="c951950c-1472-49b2-b08d-656084abc098">
+              <button class="btn btn-primary" type="button">Subscribe</button>
+            </div>
+          </form>
+        </div>
+      </div>
+  
+      <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+        <p>© 2024 Company, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+          <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</section>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="hotel.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
+
